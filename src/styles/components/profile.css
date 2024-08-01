@@ -1,7 +1,10 @@
 .profile-img {
-  width: 124px;
-  height: 124px;
   border-radius: 12px;
+  grid-area: a;
+}
+
+.name-block {
+  grid-area: b;
 }
 
 .name-block__name-box {
@@ -30,10 +33,15 @@
   color: var(--tertiary-color);
 }
 
+.language-block {
+  grid-area: c;
+}
+
 .language-block__name {
   font-weight: 500;
   font-size: 10px;
   line-height: 10.41px;
+  flex: 0 0 58px;
 }
 
 .language-block__progress {
@@ -41,10 +49,33 @@
   background-color: var(--background-color-green);
   border-radius: 3px;
   height: 11px;
+  margin-right: auto;
 }
 
 .language-block__item {
   display: flex;
   justify-content: space-between;
   gap: 17px;
+}
+
+.profile__block {
+  display: grid;
+  grid-template-areas: "a b c c";
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.language-block__languages {
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.language-block__item:last-child {
+  width: 70%;
+}
+
+section {
+  padding-top: 15px;
 }
