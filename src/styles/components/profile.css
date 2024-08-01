@@ -1,0 +1,50 @@
+.profile-img {
+  width: 124px;
+  height: 124px;
+  border-radius: 12px;
+}
+
+.name-block__name-box {
+  background-color: var(--background-color-gray);
+  padding: 12px;
+}
+
+.name-block__greetings {
+  font-size: 10px;
+  line-height: 15px;
+  font-weight: 500;
+  padding-bottom: 46px;
+}
+
+.name-block__name {
+  font-size: 14px;
+  line-height: 14.56px;
+  font-weight: 600;
+  padding-bottom: 6px;
+}
+
+.name-block__job {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+  color: var(--tertiary-color);
+}
+
+.language-block__name {
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 10.41px;
+}
+
+.language-block__progress {
+  width: 100%;
+  background-color: var(--background-color-green);
+  border-radius: 3px;
+  height: 11px;
+}
+
+.language-block__item {
+  display: flex;
+  justify-content: space-between;
+  gap: 17px;
+}

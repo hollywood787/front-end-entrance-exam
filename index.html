@@ -1,19 +1,66 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Vite App</title>
-	</head>
-	<body>
-		<section>
-			<div class="profileImg">
-				<img src="./img/profileImg.webp" alt="profile image" />
-			</div>
-			<div class="nameBox"></div>
-			<div class="lenguagesBox"></div>
-		</section>
-		<script type="module" src="./js/main.js"></script>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/styles/index.css" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <section>
+      <div class="container-fluid">
+          <div class="profile-img">
+            <img src="./src/img/profileImg.webp" alt="profile image" />
+          </div>
+          <div class="name-block">
+            <div
+              class="name-block__greetings"
+              data-value="0"
+              contenteditable
+            >
+              Hello 👋🏻 I’m
+            </div>
+            <h1
+              class="name-block__name"
+              data-value="0"
+              contenteditable
+            >
+              Karthik SR
+            </h1>
+            <div
+              class="name-block__job"
+              data-value="1"
+              contenteditable
+            >
+              UX/UI Designer
+            </div>
+          </div>
+        </div>
+        <div
+          class="language-block"
+          data-value="0"
+          contenteditable="true"
+        >
+          <h2>Languages</h2>
+          <div class="language-block__languages">
+            <div class="language-block__item">
+              <div class="language-block__name">English</div>
+              <div class="language-block__progress">English</div>
+            </div>
+            <div class="language-block__item">
+              <div class="language-block__name">Malayalam</div>
+              <div class="language-block__progress">English</div>
+            </div>
+            <div class="language-block__item">
+              <div class="language-block__name">Hindi</div>
+              <div class="language-block__progress">English</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
 </html>
