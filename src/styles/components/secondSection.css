@@ -60,8 +60,8 @@
 
 .profile__block {
   display: grid;
-  grid-template-areas: "a b c c";
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "a b" " c c";
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
@@ -78,4 +78,23 @@
 
 section {
   padding-top: 15px;
+}
+
+@media only screen and (min-width: 599px) {
+  .profile__block {
+    grid-template-areas: "a b c c";
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+
+  .language-block__name,
+  .name-block__greetings {
+    font-size: 12px;
+  }
+
+  .language-block__name {
+    flex: 0 0 100px;
+  }
 }

@@ -24,10 +24,19 @@ img {
 
 .container-fluid {
   padding: 0 20px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .wrapper {
   background-color: var(--background-color-gray);
+  padding: 12px;
+  border-radius: 12px;
+  height: 100%;
+}
+
+.wrapper-black {
+  background-color: var(--background-color-black);
   padding: 12px;
   border-radius: 12px;
   height: 100%;
@@ -46,4 +55,17 @@ li {
 .experience-block__names {
   max-width: 124px;
   width: 100%;
+}
+
+
+@media only screen and (min-width: 1024px) {
+  body {
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  h2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

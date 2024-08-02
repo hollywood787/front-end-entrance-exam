@@ -32,10 +32,114 @@
   flex-direction: column;
   background-color: var(--background-color-white);
   border-radius: 10px;
+  align-self: self-start;
 }
 
 .education-block__cards {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
   gap: 12px 16px;
   padding-top: 12px;
+}
+
+.education-block__cards .education-block__card:first-child {
+  background-color: var(--background-color-green);
+  color: var(--secondary-color);
+}
+
+.education-block__cards .education-block__card:first-child .education-block__hashTag {
+  color: var(--light-green-color);
+}
+
+.interests-block__quality {
+  padding-top: 16px;
+}
+
+.interests-block__quality-item {
+  background-color: var(--background-color-white);
+  font-size: 10px;
+  line-height: 15px;
+  padding: 4px 10px;
+  border-radius: 40px;
+}
+
+.interests-block__quality {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.contacts-block h2 {
+  color: var(--secondary-color);
+}
+
+.contacts-block a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-size: 10px;
+  line-height: 15px;
+}
+
+.contacts-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.first-block {
+  grid-area: a;
+}
+
+.second-block {
+  grid-area: b;
+}
+
+.thirty-block {
+  grid-area: c;
+}
+
+.thirty-section-block {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-areas:
+    "a"
+    "b"
+    "c";
+}
+
+
+@media only screen and (min-width: 414px) {
+  .thirty-section-block {
+    grid-template-areas:
+      "a a"
+      "b c";
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .education-block__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media only screen and (min-width: 599px) {
+  .thirty-section-block {
+    grid-template-areas:
+      "a b"
+      "a c";
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+
+  .interests-block__quality-item,
+  .education-block__date {
+    font-size: 12px;
+  }
+
+  .contacts-block__email a {
+    font-size: 12px;
+  }
 }
