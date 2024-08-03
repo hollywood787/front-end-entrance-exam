@@ -1,13 +1,15 @@
-import html2pdf from 'html2pdf.js';
-
-const container = document.querySelector('.languagesContainer');
+const container = document.querySelector('body');
 
 window.addEventListener('load', function () {
-  const languageBoxes = document.querySelectorAll('.languagesBox');
+  const editableElements = document.querySelectorAll('[contenteditable]');
 
-  languageBoxes.forEach((box) => {
+  editableElements.forEach((element, index) => {
+    element.setAttribute('data-value', index);
+  });
+
+  editableElements.forEach((box) => {
     const key = box.getAttribute('data-value');
-    const storedValue = globalThis?.sessionStorage.getItem(key);
+    const storedValue = globalThis?.localStorage.getItem(key);
 
     if (storedValue !== null) {
       box.textContent = storedValue;
@@ -15,43 +17,13 @@ window.addEventListener('load', function () {
   });
 });
 
-const allContent = document.querySelector('button');
-
-allContent.addEventListener('click', function () {
-  generatePDF();
-});
-
-const element = document.querySelector('section');
-function generatePDF() {
-  const options = {
-    margin: 0,
-    filename: 'cv',
-    html2canvas: {
-      scale: 5,
-      logging: true,
-      letterRendering: true,
-      useCORS: true,
-    },
-    jsPDF: {
-      unit: 'in',
-      format: 'A4',
-      orientation: 'landscape',
-    },
-  };
-
-  html2pdf().set(options).from(element).toPdf().save();
-}
-
 container.addEventListener(
   'blur',
   function (event) {
-    if (event.target.classList.contains('languagesBox')) {
-      const dynamicValue = event.target.getAttribute('data-value'); // Получаем значение из атрибута data-value
+    if (event.target.hasAttribute('contenteditable')) {
+      const dynamicValue = event.target.getAttribute('data-value');
 
-      globalThis?.sessionStorage.setItem(
-        dynamicValue,
-        event.target.textContent,
-      ); // Используем динамическое значение
+      globalThis?.localStorage.setItem(dynamicValue, event.target.textContent);
     }
   },
   true,

@@ -28,14 +28,16 @@ img {
   margin: 0 auto;
 }
 
-.wrapper {
+.section-wrapper {
   background-color: var(--background-color-gray);
   padding: 12px;
   border-radius: 12px;
   height: 100%;
+  overflow: hidden;
+  position: relative;
 }
 
-.wrapper-black {
+.section-wrapper__black {
   background-color: var(--background-color-black);
   padding: 12px;
   border-radius: 12px;
@@ -58,6 +60,112 @@ li {
 }
 
 
+.ripple {
+  background-position: center;
+  transition: background 0.8s;
+}
+
+.ripple:hover {
+  background: var(--background-color-blue) radial-gradient(circle, transparent 1%, var(--secondary-color) 1%) center/15000%;
+  outline: 1px solid var(--background-color-green);
+  border-radius: 8px;
+}
+
+.ripple:active {
+  background-color: var(--secondary-color);
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.ripple:focus-visible {
+  outline: 1px solid var(--background-color-green);
+  border-radius: 8px;
+}
+
+.rippleGreen {
+  background-position: center;
+  transition: background 0.8s;
+}
+
+.rippleGreen:hover {
+  background: var(--background-color-black) radial-gradient(circle, transparent 1%, var(--background-color-black) 1%) center/15000%;
+  outline: 1px solid var(--background-color-green);
+  border-radius: 8px;
+}
+
+.rippleGreen:active {
+  background-color: var(--secondary-color);
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.rippleGreen:focus-visible {
+  outline: 1px solid var(--background-color-green);
+  border-radius: 8px;
+}
+
+.rippleBlack {
+  background-position: center;
+  transition: background 0.8s;
+}
+
+.rippleBlack:hover {
+  background: var(--background-color-green) radial-gradient(circle, transparent 1%, var(--background-color-green) 1%) center/15000%;
+  outline: 1px solid var(--background-color-green);
+  border-radius: 8px;
+}
+
+.rippleBlack:active {
+  background-color: var(--background-color-gray);
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.rippleBlack:focus-visible {
+  outline: 1px solid var(--background-color-green);
+  border-radius: 8px;
+}
+
+div {
+  word-break: break-all;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 4px;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: var(--secondary-color);
+  background-color: var(--background-color-green);
+  outline: none;
+  border: 1px solid var(--background-color-green);
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  color: var(--background-color-green);
+  background-color: var(--secondary-color);
+  border: 1px solid var(--background-color-green);
+}
+
+.generatePDFButton {
+  position: fixed;
+  right: 5px;
+  top: 15px;
+  z-index: 10;
+}
+
+.generatePDFButton__icon {
+  width: 20px;
+}
+
+.generatePDFButton span {
+  display: none;
+}
+
+
 @media only screen and (min-width: 1024px) {
   body {
     font-size: 11px;
@@ -67,5 +175,21 @@ li {
   h2 {
     font-size: 16px;
     line-height: 24px;
+  }
+
+  button {
+    padding: 12px 18px;
+  }
+
+  .generatePDFButton {
+    right: 20px;
+  }
+
+  .generatePDFButton span {
+    display: block;
+  }
+
+  .generatePDFButton__icon {
+    display: none;
   }
 }

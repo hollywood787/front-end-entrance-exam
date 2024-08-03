@@ -10,6 +10,10 @@
   justify-content: space-between;
 }
 
+.profile-block__image img {
+  border-radius: 12px;
+}
+
 .experience-block__descriptions {
   padding-top: 8px;
   display: flex;
@@ -160,24 +164,6 @@ ul {
 
   .skills-block img {
     margin-left: auto;
-  }
-}
-
-@media only screen and (min-width: 599px) {
-  .second-section {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    grid-template-areas: 'a a a b';
-  }
-
-  .skills-block {
-    flex-direction: column;
-  }
-
-  .skills-block img {
-    width: initial;
-    height: initial;
-    object-fit: initial;
   }
 }
 
