@@ -3,7 +3,7 @@ import {
   generatePDF,
   getLocalKey,
   setItemLocalStorage,
-} from '../utils';
+} from '../utils/index';
 
 UIElements.GENERATEPDFBUTTON.addEventListener('click', function () {
   generatePDF();
