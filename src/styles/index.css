@@ -1,4 +1,6 @@
 @import './reset.css';
-@import "./variables.css";
+@import "./variables/global.css";
 @import "./base.css";
-@import "./components.css"
+@import "./components/firstSection.css";
+@import "./components/secondSection.css";
+@import "./components/thirtySection.css";
