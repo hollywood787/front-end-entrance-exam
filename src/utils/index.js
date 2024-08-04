@@ -1,3 +1,3 @@
-export { UIElements } from './constants';
-export { generatePDF } from './generatePDF';
-export { setItemLocalStorage, getLocalKey } from './localStorage';
+export { UIElements } from './constants.js';
+export { generatePDF } from './generatePDF.js';
+export { setItemLocalStorage, getLocalKey } from './localStorage.js';
