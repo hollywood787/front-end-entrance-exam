@@ -1,5 +1,5 @@
 @import './reset.css';
-@import './variables';
+@import './variables/global.css';
 
 body {
   color: var(--primary-color);
