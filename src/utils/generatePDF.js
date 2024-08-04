@@ -1,4 +1,4 @@
-import { UIElements } from './constants';
+import { UIElements } from './constants.js';
 
 export function generatePDF() {
   const options = {
