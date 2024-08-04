@@ -1,3 +1,5 @@
+import html2pdf from 'html2pdf.js';
+
 import { UIElements } from './constants.js';
 
 export function generatePDF() {
