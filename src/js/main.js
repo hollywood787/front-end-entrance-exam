@@ -1,4 +1,13 @@
-const container = document.querySelector('body');
+import {
+  UIElements,
+  generatePDF,
+  getLocalKey,
+  setItemLocalStorage,
+} from '../utils';
+
+UIElements.GENERATEPDFBUTTON.addEventListener('click', function () {
+  generatePDF();
+});
 
 window.addEventListener('load', function () {
   const editableElements = document.querySelectorAll('[contenteditable]');
@@ -9,21 +18,21 @@ window.addEventListener('load', function () {
 
   editableElements.forEach((box) => {
     const key = box.getAttribute('data-value');
-    const storedValue = globalThis?.localStorage.getItem(key);
+    const storedValue = getLocalKey(key);
 
     if (storedValue !== null) {
-      box.textContent = storedValue;
+      box.innerHTML = storedValue;
     }
   });
 });
 
-container.addEventListener(
+UIElements.BODY.addEventListener(
   'blur',
   function (event) {
     if (event.target.hasAttribute('contenteditable')) {
       const dynamicValue = event.target.getAttribute('data-value');
 
-      globalThis?.localStorage.setItem(dynamicValue, event.target.textContent);
+      setItemLocalStorage(dynamicValue, event.target.innerHTML);
     }
   },
   true,

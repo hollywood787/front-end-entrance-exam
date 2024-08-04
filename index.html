@@ -5,57 +5,66 @@
     <link rel="icon" type="image/svg+xml" href="./vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/styles/index.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
     <title>CV</title>
+    <meta
+      name="description"
+      content="Discover the ultimate Resume Builder: Create, edit, and download your professional resume in PDF format effortlessly"
+    />
   </head>
   <body>
-    <button class="generatePDFButton">
+    <button class="generatePDFButton" id="generatePDFButton">
       <span>Save as PDF</span>
       <img
+        loading="lazy"
         src="./src/icons/download.svg"
         alt="download icon"
         class="generatePDFButton__icon"
       />
     </button>
-
-    <div class="pdfContent">
+    <div class="pdfContent" id="pdfContent">
       <section class="profile-section">
         <div class="container-fluid">
           <div class="profile-section__block">
             <div class="profile-block__image">
-              <img src="./src/img/profileImg.webp" alt="profile image" />
+              <img
+                loading="lazy"
+                src="./src/img/profileImg.webp"
+                alt="profile image"
+              />
             </div>
             <div class="profile-block__name-block">
               <div class="section-wrapper">
-                <div class="name-block__greetings ripple" contenteditable>
-                  Hello 👋🏻 I’m
-                </div>
-                <h1 class="name-block__name ripple" contenteditable>
-                  Karthik SR
-                </h1>
-                <div class="name-block__job ripple" contenteditable>
-                  UX/UI Designer
+                <div class="name-block__container">
+                  <div class="name-block__greetings ripple ripple__default-styles" contenteditable>
+                    Hello 👋🏻 I’m
+                  </div>
+                  <h1 class="name-block__name ripple ripple__default-styles" contenteditable>
+                    Karthik SR
+                  </h1>
+                  <div class="name-block__job ripple ripple__default-styles" contenteditable>
+                    UX/UI Designer
+                  </div>
                 </div>
               </div>
             </div>
             <div class="profile-block__language-block">
               <div class="section-wrapper">
-                <h2 contenteditable class="ripple">Languages</h2>
+                <h2 contenteditable class="ripple ripple__default-styles">Languages</h2>
                 <div class="language-block__languages">
                   <div class="language-block__item">
-                    <div class="language-block__name ripple" contenteditable>
+                    <div class="language-block__name ripple ripple__default-styles" contenteditable>
                       English
                     </div>
                     <div class="language-block__progress"></div>
                   </div>
                   <div class="language-block__item">
-                    <div class="language-block__name ripple" contenteditable>
+                    <div class="language-block__name ripple ripple__default-styles" contenteditable>
                       Malayalam
                     </div>
                     <div class="language-block__progress"></div>
                   </div>
                   <div class="language-block__item">
-                    <div class="language-block__name ripple" contenteditable>
+                    <div class="language-block__name ripple ripple__default-styles" contenteditable>
                       Hindi
                     </div>
                     <div class="language-block__progress"></div>
@@ -67,20 +76,20 @@
         </div>
       </section>
 
-      <section>
+      <section class="experience-section">
         <div class="container-fluid">
           <div class="second-section">
             <div class="experience-block">
               <div class="section-wrapper">
-                <h2 contenteditable class="ripple">Experience</h2>
+                <h2 contenteditable class="ripple ripple__default-styles">Experience</h2>
                 <div class="experience-block__info">
                   <div class="experience-block__item">
                     <div class="experience-block__date">
-                      <div contenteditable class="rippleGreen">
+                      <div contenteditable class="rippleGreen ripple__default-styles">
                         Jun. 2023 - Present
                       </div>
                       <div
-                        class="experience-block__most rippleGreen"
+                        class="experience-block__most rippleGreen ripple__default-styles"
                         contenteditable
                       >
                         most recent
@@ -89,20 +98,20 @@
                     <div class="experience-block__descriptions">
                       <div class="experience-block__names">
                         <div
-                          class="experience-block__name rippleGreen"
+                          class="experience-block__name rippleGreen ripple__default-styles"
                           contenteditable
                         >
                           Marketing Manager
                         </div>
                         <div class="experience-block__time">
                           <div
-                            class="experience-block__time-item rippleGreen"
+                            class="experience-block__time-item rippleGreen ripple__default-styles"
                             contenteditable
                           >
                             Pankayam
                           </div>
                           <div
-                            class="experience-block__time-item rippleGreen"
+                            class="experience-block__time-item rippleGreen ripple__default-styles"
                             contenteditable
                           >
                             Full-time
@@ -110,7 +119,7 @@
                         </div>
                       </div>
                       <div class="experience-block__description">
-                        <ul contenteditable class="rippleGreen">
+                        <ul contenteditable class="rippleGreen ripple__default-styles">
                           <li>
                             Strategy development and planning of campaigns that
                             promote the business and generate genuine traffic
@@ -124,20 +133,20 @@
                     </div>
                   </div>
                   <div class="experience-block__item">
-                    <div class="experience-block__date ripple" contenteditable>
+                    <div class="experience-block__date ripple ripple__default-styles" contenteditable>
                       2017 - Present
                     </div>
                     <div class="experience-block__descriptions">
                       <div class="experience-block__names">
                         <div
-                          class="experience-block__name ripple"
+                          class="experience-block__name ripple ripple__default-styles"
                           contenteditable
                         >
                           Graphic / Web designer
                         </div>
                         <div class="experience-block__time">
                           <div
-                            class="experience-block__time-item ripple"
+                            class="experience-block__time-item ripple ripple__default-styles"
                             contenteditable
                           >
                             Freelance
@@ -145,7 +154,7 @@
                         </div>
                       </div>
                       <div
-                        class="experience-block__description ripple"
+                        class="experience-block__description ripple ripple__default-styles"
                         contenteditable
                       >
                         <ul>
@@ -164,33 +173,33 @@
                     </div>
                   </div>
                   <div class="experience-block__item">
-                    <div class="experience-block__date ripple" contenteditable>
+                    <div class="experience-block__date ripple ripple__default-styles" contenteditable>
                       Sep. 2021 - Jun. 2023
                     </div>
                     <div class="experience-block__descriptions">
                       <div class="experience-block__names">
                         <div
-                          class="experience-block__name ripple"
+                          class="experience-block__name ripple ripple__default-styles"
                           contenteditable
                         >
                           Legal Assistant
                         </div>
                         <div class="experience-block__time">
                           <div
-                            class="experience-block__time-item ripple"
+                            class="experience-block__time-item ripple ripple__default-styles"
                             contenteditable
                           >
                             Law Firm
                           </div>
                           <div
-                            class="experience-block__time-item ripple"
+                            class="experience-block__time-item ripple ripple__default-styles"
                             contenteditable
                           >
                             Intern
                           </div>
                         </div>
                       </div>
-                      <div class="experience-block__description ripple">
+                      <div class="experience-block__description ripple ripple__default-styles">
                         <ul contenteditable>
                           <li>
                             Provide administrative support to lawyer and enhance
@@ -212,49 +221,95 @@
             </div>
             <div class="tools-block">
               <div class="section-wrapper">
-                <h2 class="ripple" contenteditable>Tools</h2>
+                <h2 class="ripple ripple__default-styles" contenteditable>Tools</h2>
 
                 <div class="skills-block">
                   <div class="skills-block__design-block">
                     <div
-                      class="skills-block__title rippleBlack"
+                      class="skills-block__title rippleBlack ripple__default-styles"
                       contenteditable
                     >
                       design
                     </div>
-                    <img src="./src/icons/logoFigma.svg" alt="figma" />
-                    <img src="./src/icons/logoPhotoshop.svg" alt="Photoshop" />
                     <img
+                      loading="lazy"
+                      src="./src/icons/logoFigma.svg"
+                      alt="figma"
+                    />
+                    <img
+                      loading="lazy"
+                      src="./src/icons/logoPhotoshop.svg"
+                      alt="Photoshop"
+                    />
+                    <img
+                      loading="lazy"
                       src="./src/icons/logoAdobeIllustrator.svg"
                       alt="Illustrator"
                     />
-                    <img src="./src/icons/logoPremiere.svg" alt="Premiere" />
-                    <img src="./src/icons/logoNotion.svg" alt="Notion" />
-                    <img src="./src/icons/logoMeet.svg" alt="google meet" />
+                    <img
+                      loading="lazy"
+                      src="./src/icons/logoPremiere.svg"
+                      alt="Premiere"
+                    />
+                    <img
+                      loading="lazy"
+                      src="./src/icons/logoNotion.svg"
+                      alt="Notion"
+                    />
+                    <img
+                      loading="lazy"
+                      src="./src/icons/logoMeet.svg"
+                      alt="google meet"
+                    />
                   </div>
                   <div class="skills-block__no-code-block">
                     <div
-                      class="skills-block__title rippleBlack"
+                      class="skills-block__title rippleBlack ripple__default-styles"
                       contenteditable
                     >
                       no-code
                     </div>
-                    <img src="./src/icons/logoZapìer.svg" alt="Zapìer" />
-                    <img src="./src/icons/logoWebflow.svg" alt="Webflow" />
-                    <img src="./src/icons/logoFramer.svg" alt="Framer" />
-                    <img src="./src/icons/logoWordpress.svg" alt="Wordpress" />
+                    <img
+                      loading="lazy"
+                      src="./src/icons/logoZapìer.svg"
+                      alt="Zapìer"
+                    />
+                    <img
+                      loading="lazy"
+                      src="./src/icons/logoWebflow.svg"
+                      alt="Webflow"
+                    />
+                    <img
+                      loading="lazy"
+                      src="./src/icons/logoFramer.svg"
+                      alt="Framer"
+                    />
+                    <img
+                      loading="lazy"
+                      src="./src/icons/logoWordpress.svg"
+                      alt="Wordpress"
+                    />
                   </div>
                   <div class="skills-block__artoficial-intelligence">
                     <div
-                      class="skills-block__title rippleBlack"
+                      class="skills-block__title rippleBlack ripple__default-styles"
                       contenteditable
                     >
                       artoficial intelligence
                     </div>
-                    <img src="./src/icons/logoChatGPT.png" alt="ChatGPT" />
-                    <img src="./src/icons/logoCopilot.png" alt="Copilot" />
                     <img
-                      src="./src/icons/logoMidjourney.png"
+                      loading="lazy"
+                      src="./src/icons/logoChatGPT.webp"
+                      alt="ChatGPT"
+                    />
+                    <img
+                      loading="lazy"
+                      src="./src/icons/logoCopilot.webp"
+                      alt="Copilot"
+                    />
+                    <img
+                      loading="lazy"
+                      src="./src/icons/logoMidjourney.webp"
                       alt="Midjourney"
                     />
                   </div>
@@ -270,26 +325,30 @@
           <div class="thirty-section-block">
             <div class="section-wrapper first-block">
               <div class="education-block">
-                <h2 contenteditable class="ripple">Education</h2>
+                <h2 contenteditable class="ripple ripple__default-styles">Education</h2>
               </div>
               <div class="education-block__cards">
                 <div class="education-block__card">
                   <div
-                    class="education-block__date rippleGreen"
+                    class="education-block__date rippleGreen ripple__default-styles"
                     contenteditable
                   >
                     2023
-                    <img src="./src/icons/logoFavorites.svg" alt="Favorites" />
+                    <img
+                      loading="lazy"
+                      src="./src/icons/logoFavorites.svg"
+                      alt="Favorites"
+                    />
                   </div>
                   <div class="education-block__description">
                     <div
-                      class="education-block__title rippleGreen"
+                      class="education-block__title rippleGreen ripple__default-styles"
                       contenteditable
                     >
                       UI/UX
                     </div>
                     <div
-                      class="education-block__hashTag rippleGreen"
+                      class="education-block__hashTag rippleGreen ripple__default-styles"
                       contenteditable
                     >
                       #UX #UI #research #DesignSystem #Ui #wireframing #figma
@@ -297,47 +356,47 @@
                     </div>
                   </div>
                   <div
-                    class="education-block__from rippleGreen"
+                    class="education-block__from rippleGreen ripple__default-styles"
                     contenteditable
                   >
                     Coursera
                   </div>
                 </div>
                 <div class="education-block__card">
-                  <div class="education-block__date ripple" contenteditable>
+                  <div class="education-block__date ripple ripple__default-styles" contenteditable>
                     2017 - 2022
                   </div>
                   <div class="education-block__description">
-                    <div class="education-block__title ripple" contenteditable>
+                    <div class="education-block__title ripple ripple__default-styles" contenteditable>
                       Law
                     </div>
                     <div
-                      class="education-block__hashTag ripple"
+                      class="education-block__hashTag ripple ripple__default-styles"
                       contenteditable
                     >
                       #law #legalStudies #contracts #internationalLaws
                     </div>
                   </div>
-                  <div class="education-block__from ripple" contenteditable>
+                  <div class="education-block__from ripple ripple__default-styles" contenteditable>
                     University of Kerala
                   </div>
                 </div>
                 <div class="education-block__card">
-                  <div class="education-block__date ripple" contenteditable>
+                  <div class="education-block__date ripple ripple__default-styles" contenteditable>
                     2017
                   </div>
                   <div class="education-block__description">
-                    <div class="education-block__title ripple" contenteditable>
+                    <div class="education-block__title ripple ripple__default-styles" contenteditable>
                       Graphic design
                     </div>
                     <div
-                      class="education-block__hashTag ripple"
+                      class="education-block__hashTag ripple ripple__default-styles"
                       contenteditable
                     >
                       #branding #web #illustration #adobe
                     </div>
                   </div>
-                  <div class="education-block__from ripple" contenteditable>
+                  <div class="education-block__from ripple ripple__default-styles" contenteditable>
                     Coursrea
                   </div>
                 </div>
@@ -346,65 +405,65 @@
             <div class="section-wrapper second-block">
               <div class="interests-block">
                 <div class="interests-block__title">
-                  <h2 class="ripple" contenteditable>Interests</h2>
+                  <h2 class="ripple ripple__default-styles" contenteditable>Interests</h2>
                 </div>
                 <div class="interests-block__quality">
                   <div
-                    class="interests-block__quality-item ripple"
+                    class="interests-block__quality-item ripple ripple__default-styles"
                     contenteditable
                   >
                     branding
                   </div>
                   <div
-                    class="interests-block__quality-item ripple"
+                    class="interests-block__quality-item ripple ripple__default-styles"
                     contenteditable
                   >
                     design
                   </div>
                   <div
-                    class="interests-block__quality-item ripple"
+                    class="interests-block__quality-item ripple ripple__default-styles"
                     contenteditable
                   >
                     photography
                   </div>
                   <div
-                    class="interests-block__quality-item ripple"
+                    class="interests-block__quality-item ripple ripple__default-styles"
                     contenteditable
                   >
                     artificial intelligence
                   </div>
                   <div
-                    class="interests-block__quality-item ripple"
+                    class="interests-block__quality-item ripple ripple__default-styles"
                     contenteditable
                   >
                     illustration
                   </div>
                   <div
-                    class="interests-block__quality-item ripple"
+                    class="interests-block__quality-item ripple ripple__default-styles"
                     contenteditable
                   >
                     typography
                   </div>
                   <div
-                    class="interests-block__quality-item ripple"
+                    class="interests-block__quality-item ripple ripple__default-styles"
                     contenteditable
                   >
                     social networks
                   </div>
                   <div
-                    class="interests-block__quality-item ripple"
+                    class="interests-block__quality-item ripple ripple__default-styles"
                     contenteditable
                   >
                     research
                   </div>
                   <div
-                    class="interests-block__quality-item ripple"
+                    class="interests-block__quality-item ripple ripple__default-styles"
                     contenteditable
                   >
                     dron pilot
                   </div>
                   <div
-                    class="interests-block__quality-item ripple"
+                    class="interests-block__quality-item ripple ripple__default-styles"
                     contenteditable
                   >
                     games
@@ -414,11 +473,11 @@
             </div>
             <div class="section-wrapper__black thirty-block">
               <div class="contacts-block">
-                <h2 class="rippleBlack" contenteditable>
+                <h2 class="rippleBlack ripple__default-styles" contenteditable>
                   Let´s chat! I´m ready to work on excinting projects
                 </h2>
                 <a
-                  class="contacts-block__email rippleBlack"
+                  class="contacts-block__email rippleBlack ripple__default-styles"
                   href="mailto:srkarthik.designscape@gmail.com"
                   contenteditable
                   >srkarthik.designscape@gmail.com</a
@@ -429,34 +488,12 @@
         </div>
       </section>
     </div>
-    <script>
-      const generatePDFButton = document.querySelector('button');
-
-      generatePDFButton.addEventListener('click', function () {
-        generatePDF();
-      });
-
-      const element = document.querySelector('.pdfContent');
-      function generatePDF() {
-        const options = {
-          margin: 0,
-          filename: 'cv',
-          html2canvas: {
-            scale: 5,
-            logging: true,
-            letterRendering: true,
-            useCORS: true,
-          },
-          jsPDF: {
-            unit: 'in',
-            format: 'A4',
-            orientation: 'landscape',
-          },
-        };
-
-        html2pdf().set(options).from(element).toPdf().save();
-      }
-    </script>
     <script type="module" src="./src/js/main.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+      integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </body>
 </html>

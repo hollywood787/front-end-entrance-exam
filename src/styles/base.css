@@ -1,5 +1,5 @@
 @import './reset.css';
-@import './variables/global.css';
+@import './variables';
 
 body {
   color: var(--primary-color);
@@ -50,81 +50,6 @@ h2 {
   font-weight: 500;
 }
 
-li {
-  list-style-type: disc;
-}
-
-.experience-block__names {
-  max-width: 124px;
-  width: 100%;
-}
-
-
-.ripple {
-  background-position: center;
-  transition: background 0.8s;
-}
-
-.ripple:hover {
-  background: var(--background-color-blue) radial-gradient(circle, transparent 1%, var(--secondary-color) 1%) center/15000%;
-  outline: 1px solid var(--background-color-green);
-  border-radius: 8px;
-}
-
-.ripple:active {
-  background-color: var(--secondary-color);
-  background-size: 100%;
-  transition: background 0s;
-}
-
-.ripple:focus-visible {
-  outline: 1px solid var(--background-color-green);
-  border-radius: 8px;
-}
-
-.rippleGreen {
-  background-position: center;
-  transition: background 0.8s;
-}
-
-.rippleGreen:hover {
-  background: var(--background-color-black) radial-gradient(circle, transparent 1%, var(--background-color-black) 1%) center/15000%;
-  outline: 1px solid var(--background-color-green);
-  border-radius: 8px;
-}
-
-.rippleGreen:active {
-  background-color: var(--secondary-color);
-  background-size: 100%;
-  transition: background 0s;
-}
-
-.rippleGreen:focus-visible {
-  outline: 1px solid var(--background-color-green);
-  border-radius: 8px;
-}
-
-.rippleBlack {
-  background-position: center;
-  transition: background 0.8s;
-}
-
-.rippleBlack:hover {
-  background: var(--background-color-green) radial-gradient(circle, transparent 1%, var(--background-color-green) 1%) center/15000%;
-  outline: 1px solid var(--background-color-green);
-  border-radius: 8px;
-}
-
-.rippleBlack:active {
-  background-color: var(--background-color-gray);
-  background-size: 100%;
-  transition: background 0s;
-}
-
-.rippleBlack:focus-visible {
-  outline: 1px solid var(--background-color-green);
-  border-radius: 8px;
-}
 
 div {
   word-break: break-all;
@@ -149,6 +74,62 @@ button:hover {
   background-color: var(--secondary-color);
   border: 1px solid var(--background-color-green);
 }
+
+li {
+  list-style-type: disc;
+}
+
+.experience-block__names {
+  max-width: 124px;
+  width: 100%;
+}
+
+.ripple__default-styles {
+  background-position: center;
+  transition: background 0.8s;
+}
+
+.ripple__default-styles::focus-visible {
+  background-position: center;
+  transition: background 0.8s;
+}
+
+.ripple:hover {
+  background: var(--background-color-blue) radial-gradient(circle, transparent 1%, var(--secondary-color) 1%) center/150000%;
+  outline: 1px solid var(--background-color-green);
+  border-radius: 8px;
+}
+
+.ripple:active {
+  background-color: var(--secondary-color);
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.rippleGreen:hover {
+  background: var(--background-color-black) radial-gradient(circle, transparent 1%, var(--background-color-black) 1%) center/150000%;
+  outline: 1px solid var(--background-color-green);
+  border-radius: 8px;
+}
+
+.rippleGreen:active {
+  background-color: var(--secondary-color);
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.rippleBlack:hover {
+  background: var(--background-color-green) radial-gradient(circle, transparent 1%, var(--background-color-green) 1%) center/150000%;
+  outline: 1px solid var(--background-color-green);
+  border-radius: 8px;
+}
+
+.rippleBlack:active {
+  background-color: var(--background-color-gray);
+  background-size: 100%;
+  transition: background 0s;
+}
+
 
 .generatePDFButton {
   position: fixed;
